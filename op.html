@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="display"></div>
+    
+    <input type="number" id="number" />
+    <button onclick="oddoreven()">checknumber</button>
+
+    <script>
+
+        function oddoreven()
+        {
+            const num= + (document.getElementById("number").value);
+
+            if(num<5)
+            {
+                document.getElementById("display").innerText = "Even";
+
+            }
+            else
+            {
+                document.getElementById("display").innerText = "odd";
+
+            }
+        
+        }
+
+    </script>
+
+</body>
+</html>
