@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+     <input type="text" id="subj1"/>
+     <input type="text" id="subj2"/>
+     <input type="text" id="subj3"/>
+     <button onclick="result()">result</button>
+
+    <script>
+
+        let subj1,subj2,sub3 =0;
+        let stotal,perc=0
+
+        function result()
+        {
+            getvalues();
+            total();
+            per();
+            gra();
+        }
+
+        function getvalues()
+        {
+            subj1 = +(document.getElementById("subj1").value);
+            subj2 = +(document.getElementById("subj2").value);
+            sub3 = +(document.getElementById("subj3").value);
+
+        }
+      
+        function total()
+        {
+                stotal = subj1+subj2+sub3;
+                console.log(stotal);
+
+        }
+
+        function per()
+        {
+            perc = stotal/3;
+        }
+
+        function gra()
+        {
+
+        }
+     
+
+
+    </script>
+</body>
+</html>
