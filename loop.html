@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="counter" />
+
+    <div id="dis">5</div>
+    
+
+    <button onclick="inc()">+</button>
+    <button onclick="dec()">-</button>
+ 
+
+
+    <script>
+
+      let p= 0;
+      let inpu = 0;
+
+      function inc()
+      {
+       
+      inpu =  +(document.getElementById("counter").value)
+       
+      p=+(document.getElementById("dis").innerText)
+        if(inpu >0)
+        {
+           
+            document.getElementById("dis").innerText = p + inpu;
+        }
+        else
+        {
+
+            document.getElementById("dis").innerText = ++p;
+        }
+        
+      }
+
+      function dec()
+      {
+        document.getElementById("dis").innerText = --p;
+      }
+        
+
+    </script>
+    
+</body>
+</html>

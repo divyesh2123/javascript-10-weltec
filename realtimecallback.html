@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <table id="tb1"></table>
+        <table id="tb2"></table>
+    <script>
+
+        function getdataFromAP(url,callme)
+        {
+
+            fetch(url).then(y=>y.json())
+            .then(y=> callme(y))
+
+
+
+        }
+
+        function displayCommets(data)
+        {
+            let p = data.map((y)=>{
+
+                return `<tr><td>${y.name}</td></tr>`
+            })
+
+            document.getElementById("tb1").innerHTML =p.join(" ");
+
+        }
+
+        function displayPosts(data)
+        {
+
+            let p = data.map((y)=>{
+
+return `<tr><td>${y.title}</td></tr>`
+})
+
+
+document.getElementById("tb2").innerHTML =p.join(" ");
+        }
+
+      getdataFromAP("https://jsonplaceholder.typicode.com/posts",displayPosts);
+
+       getdataFromAP("https://jsonplaceholder.typicode.com/comments",displayCommets)
+
+    </script>
+    
+</body>
+</html>
