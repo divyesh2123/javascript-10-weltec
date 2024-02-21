@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+function getPromise(URL) {
+  let promise = new Promise(function (resolve, reject) {
+    let req = new XMLHttpRequest();
+    req.open("GET", URL);
+    req.onload = function () {
+      if (req.status == 200) {
+        resolve(req.response);
+      } else {
+        reject("There is an Error!");
+      }
+    };
+    req.send();
+  });
+  return promise;
+}
+
+
+getPromise("https://jsonplaceholder.typicode.com/posts123").then(y=>{
+    console.log(y);
+}).catch(p=>{
+    console.log(p);
+}).finally(d=>{
+    console.log("ddddd");
+})
+    </script>
+    
+</body>
+</html>

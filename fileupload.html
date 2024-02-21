@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="file" id="file"  onchange="handleFileUpload(event)" />
+
+
+    <img src="" />
+    <script>
+
+        const handleFileUpload = (e)=>{
+
+            let p = toBase64(e.target.files[0]).then(y=>{
+                console.log(y)
+            })
+           
+        }
+
+        const toBase64 = file => new Promise((resolve, reject) => {
+    const reader1 = new FileReader();
+    reader1.readAsDataURL(file);
+    reader1.onload = () => resolve(reader1.result);
+    reader1.onerror = reject;
+});
+
+// Example call:
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="searchTerm" />
+    <button onclick="search()">search</button>
+    
+    <ul id="display"> 
+      
+    </ul>
+  
+    <script>
+
+            let array = ["Vadodara","Anand","Pune","Banglore","Nodia","Vapi"];
+            let i =0;
+           
+            
+            function display()
+            {
+                while(i<array.length)
+            {
+                document.getElementById("display").innerHTML
+                 += 
+                 "<li>"+ array[i]+ "</li>";
+                    i=i+1;
+            }
+
+            }
+       
+            function search()
+            {
+            let i=0;
+            let searchTerm = document.getElementById("searchTerm").value;
+            document.getElementById("display").innerHTML = "";
+                do
+                {if(array[i].includes(searchTerm) == true)
+                    {
+                      document.getElementById("display").innerHTML
+                 += 
+                 "<li>"+ array[i]+ "</li>";
+                   
+                    }
+                    i=i+1;
+
+                }while(i<array.length)
+            }
+            display();
+    </script>
+</body>
+</html>
