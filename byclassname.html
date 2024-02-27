@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text"  class="data" name="input"/>
+    <input type="text"  class="data" name="input"/>
+    <input type="text"  class="data" name="input"/>
+    <input type="text"  class="data" name="input"/>
+    <input type="text"  class="data" name="input"/>
+
+    <input type="button" value="save" onclick="saveInfo()"/>
+
+
+
+    <script>
+
+        function saveInfo()
+        {
+            let p = document.getElementsByName("input");
+
+            for(let i=0;i<p.length;i++)
+            {
+                console.log(p[i].value);
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

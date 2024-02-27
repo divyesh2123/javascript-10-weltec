@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <input type="text" id="number1"/>
+        <input type="text" id="number2"/>
+        <input type="text" id="number3"/>
+        <input type="text" id="number4"/>
+
+        <button onclick="tocheck()"> CheckNumber </button>
+
+        <div id="display"></div>
+    <script>
+
+        function tocheck()
+        {
+            let number1= document.getElementsByTagName("input");
+
+            
+            let sum1=0;
+            let sum2=0;
+            for(let i =0;i<2;i++)
+            {
+
+                sum1 +=  +(number1[i].value);
+            }
+
+            for(let i =2;i<4;i++)
+            {
+                sum2 +=  +(number1[i].value);
+
+            }
+                   
+            let z = sum1>sum2?sum1:sum2;
+
+            document.getElementById("display").innerText =z;
+
+        }
+
+    </script>
+    
+</body>
+</html>
